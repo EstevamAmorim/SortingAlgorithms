@@ -27,17 +27,17 @@ int partitionArray(int numberList[], int first, int last)
 
 void quicksort(int numberList[], int first, int last)
 {
-	if(first < last)
-	{
-		int middle = partitionArray(numberList, first, last);
-		quicksort(numberList, first, middle - 1);
-		quicksort(numberList, middle + 1, last);
-	}
+	if(!(first < last)) return;
+	
+	int middle = partitionArray(numberList, first, last);
+	quicksort(numberList, first, middle - 1);
+	quicksort(numberList, middle + 1, last);
 }
 
 int main() 
 {
 	int numberList[LENGTH];
+
 	// createCrescentList(numberList);
 	// createDecrescentList(numberList);
 	createAleatoryList(numberList, LENGTH);

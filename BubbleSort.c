@@ -6,6 +6,7 @@ void bubbleSort(int numbersList[])
 {
 	int i = 1;
 	int j = 0;
+
 	for (i = 0; i <= (LENGTH - 1); i++) 
 	{
 		for(j = LENGTH; j >=  i + 1; j--) 
@@ -23,6 +24,7 @@ void bubbleSort(int numbersList[])
 int main() 
 {
 	int numberList[LENGTH];
+	
 	// createCrescentList(numberList);
 	// createDecrescentList(numberList);
 	createAleatoryList(numberList, LENGTH);

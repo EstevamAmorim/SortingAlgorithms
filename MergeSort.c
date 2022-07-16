@@ -47,18 +47,18 @@ void merge(int numberList[], int first, int middle, int last)
 
 void mergeSort(int numberList[], int first, int last) 
 {
-	if (first < last) 
-	{
-		int middle = (first + last)/2;
-		mergeSort(numberList, first, middle);
-		mergeSort(numberList, middle + 1, last);
-		merge(numberList, first, middle, last);
-	}
+	if (!(first < last)) return;
+	
+	int middle = (first + last)/2;
+	mergeSort(numberList, first, middle);
+	mergeSort(numberList, middle + 1, last);
+	merge(numberList, first, middle, last);
 }
 
 int main() 
 {
 	int numberList[LENGTH];
+
 	// createCrescentList(numberList);
 	// createDecrescentList(numberList);
 	createAleatoryList(numberList, LENGTH);

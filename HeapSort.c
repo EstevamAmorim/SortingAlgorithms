@@ -27,6 +27,7 @@ void maxHeapify(int numberList[], int last, int i)
 void buildMaxHeap(int numberList[]) 
 {
     int i;
+
     for(i = floor(LENGTH/2) - 1; i >= 0; i--) 
     {
         maxHeapify(numberList, LENGTH, i);
@@ -37,6 +38,7 @@ void heapSort(int numberList[], int last)
 {
     int i, aux;
     buildMaxHeap(numberList);
+
     for(i = LENGTH; i >= 1; i--) 
     {
         aux = numberList[0];
@@ -50,6 +52,7 @@ void heapSort(int numberList[], int last)
 int main() 
 {
 	int numberList[LENGTH];
+    
     // createCrescentList(numberList);
 	// createDecrescentList(numberList);
 	createAleatoryList(numberList, LENGTH);
